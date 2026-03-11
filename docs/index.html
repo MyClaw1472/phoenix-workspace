@@ -1,0 +1,94 @@
+<!doctype html>
+<html lang="en">
+<head>
+  <meta charset="utf-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1" />
+  <title>Phoenix Crypto Checkout</title>
+  <link rel="stylesheet" href="styles.css" />
+  <script defer src="https://cdnjs.cloudflare.com/ajax/libs/qrcodejs/1.0.0/qrcode.min.js"></script>
+  <script defer src="app.js"></script>
+</head>
+<body>
+  <main class="wrap">
+    <section class="hero card">
+      <p class="eyebrow">Static app for GitHub Pages</p>
+      <h1>Phoenix Crypto Checkout</h1>
+      <p class="muted">Generate a clean payment request, show the wallet address, and present a QR code for fast crypto payments.</p>
+    </section>
+
+    <section class="grid">
+      <form id="checkoutForm" class="card form">
+        <h2>Payment details</h2>
+
+        <label>
+          Client / buyer
+          <input id="clientName" type="text" placeholder="Client name" />
+        </label>
+
+        <label>
+          Item / service
+          <input id="serviceName" type="text" value="Lead list building service" />
+        </label>
+
+        <div class="row">
+          <label>
+            Amount
+            <input id="amount" type="number" min="0" step="0.01" placeholder="35" />
+          </label>
+
+          <label>
+            Currency label
+            <select id="currency">
+              <option value="USD">USD</option>
+              <option value="ETH">ETH</option>
+              <option value="USDT (ERC-20)">USDT (ERC-20)</option>
+            </select>
+          </label>
+        </div>
+
+        <label>
+          Wallet address
+          <input id="walletAddress" type="text" value="0x857b7a41cc384509ff27c63227984173f46613dd" />
+        </label>
+
+        <label>
+          Network note
+          <input id="network" type="text" value="Ethereum network only" />
+        </label>
+
+        <label>
+          Extra note
+          <textarea id="extraNote" rows="4">Send payment proof after transfer. Work begins after confirmation.</textarea>
+        </label>
+
+        <button type="submit">Generate payment request</button>
+      </form>
+
+      <section class="card preview">
+        <div class="preview-head">
+          <h2>Preview</h2>
+          <button id="copyMessageBtn" type="button" class="secondary">Copy message</button>
+        </div>
+
+        <div class="preview-block">
+          <p class="label">Wallet</p>
+          <div class="copy-row">
+            <code id="walletDisplay"></code>
+            <button id="copyWalletBtn" type="button" class="secondary small">Copy</button>
+          </div>
+        </div>
+
+        <div class="preview-block">
+          <p class="label">QR code</p>
+          <div id="qrcode" class="qrbox"></div>
+        </div>
+
+        <div class="preview-block">
+          <p class="label">Payment request</p>
+          <pre id="messageOutput"></pre>
+        </div>
+      </section>
+    </section>
+  </main>
+</body>
+</html>
