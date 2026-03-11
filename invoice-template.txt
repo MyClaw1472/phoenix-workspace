@@ -1,0 +1,14 @@
+INVOICE
+
+From: Farjad
+Service: [SERVICE NAME]
+Amount: [AMOUNT]
+Due: Immediate / Upfront
+
+Payment methods:
+- Crypto (Ethereum): 0x857b7a41cc384509ff27c63227984173f46613dd
+- Payoneer: themohal@hotmail.com
+
+Notes:
+- Send payment proof after payment.
+- Work begins after confirmation unless otherwise agreed.
