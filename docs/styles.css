@@ -25,6 +25,10 @@ body {
 .eyebrow { color: var(--accent-2); text-transform: uppercase; letter-spacing: .12em; font-size: 12px; }
 .muted { color: var(--muted); }
 .grid { display: grid; grid-template-columns: 1.05fr .95fr; gap: 22px; }
+.services { padding: 22px; margin-bottom: 22px; }
+.service-grid { display: grid; grid-template-columns: repeat(3, 1fr); gap: 16px; margin-top: 14px; }
+.service-grid article { background: #0b1323; border: 1px solid var(--line); border-radius: 14px; padding: 16px; }
+.service-grid h3 { margin-top: 0; }
 .form, .preview { padding: 22px; }
 label { display: block; margin-bottom: 16px; color: var(--muted); font-size: 14px; }
 input, select, textarea {
@@ -50,5 +54,5 @@ code, pre {
   background: white; border-radius: 16px; padding: 16px; min-height: 200px; display: grid; place-items: center;
 }
 @media (max-width: 860px) {
-  .grid, .row { grid-template-columns: 1fr; }
+  .grid, .row, .service-grid { grid-template-columns: 1fr; }
 }
